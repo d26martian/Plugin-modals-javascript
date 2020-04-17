@@ -1,0 +1,69 @@
+.dmodal {}
+.dmodal.open .modal-overlay,
+.dmodal.open .modal-window {
+    opacity: 1;
+    z-index: 1000;
+}
+.dmodal.hide .modal-overlay,
+.dmodal.hide .modal-window {
+    opacity: 1;
+    z-index: 1000;
+}
+
+.dmodal.open .modal-window {
+    transform: translateY(100px);
+}
+.dmodal.open .modal-overlay {
+    background: rgba(0,0,0,.5);
+}
+
+.dmodal.hide .modal-window {
+    transform: translateY(-200px);
+}
+.dmodal.hide .modal-overlay {
+    background: rgba(0,0,0,0);
+}
+
+.modal-window, .modal-overlay {
+    opacity: 0;
+    z-index: -1;
+}
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: rgba(0,0,0,.5);
+    transition: background .2s ease-in;
+}
+
+.modal-window {
+    width: 600px;
+    border-radius: 5px;
+    background-color: #fff;
+    margin: 0 auto;
+    transform: translateY(-300px);
+    transition: transform .2s ease-in;
+}
+.modal-header {
+    display: flex;
+    padding: 7px 12px;
+    border-bottom: 1px solid #ccc;
+}
+.modal-title {
+    flex: 1;
+    font-size: 1.5rem;
+}
+.modal-close {
+    cursor: pointer;
+}
+.modal-body {
+    padding: 12px;
+    border-bottom: 0;
+}
+.modal-footer {
+    padding: 7px 12px;
+    border-top: 1px solid #ccc;
+}
